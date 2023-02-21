@@ -8,8 +8,8 @@ const Preference = () => {
   let navigate = useNavigate();
   const email = useSelector((state) => state.userStatus.userEmail);
 
-  const [brand, setBrand] = useState("");
-  const [category, setCategory] = useState("");
+  const [brand, setBrand] = useState("apple");
+  const [category, setCategory] = useState("home-decoration");
   const dispatch = useDispatch();
 
   useEffect(() => {
