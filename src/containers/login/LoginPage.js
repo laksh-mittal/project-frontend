@@ -15,6 +15,12 @@ function LoginPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
+
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     console.log("login attempted!");

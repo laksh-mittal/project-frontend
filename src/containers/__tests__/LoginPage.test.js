@@ -111,6 +111,8 @@ describe("LoginPage component", () => {
 
   test("switch to register tab, check register form components, click submit, check register failed message", async () => {
     axios.post.mockResolvedValue({ data: { response: false } });
+    const navigate = jest.fn();
+    useNavigate.mockReturnValue(navigate);
 
     //render the component
     const { getByText } = render(
